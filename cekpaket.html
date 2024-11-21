@@ -49,6 +49,7 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            overflow-x: auto; /* Menambahkan scroll horizontal pada container */
         }
 
         .container p {
@@ -58,13 +59,13 @@
 
         table {
             width: 100%;
-            max-width: 1000px; /* Agar tabel tidak terlalu besar pada layar besar */
+            max-width: 100%; /* Menjaga lebar tabel sesuai dengan lebar layar */
             border-collapse: collapse;
             border: 1px solid #8f5bbd;
         }
 
         th, td {
-            padding: 6px 10px; /* Padding lebih kecil */
+            padding: 8px 12px; /* Padding lebih kecil */
             text-align: center;
             border: 1px solid #8f5bbd;
             font-size: 12px; /* Ukuran font lebih kecil */
@@ -102,15 +103,22 @@
             header {
                 font-size: 16px; /* Ukuran font header lebih kecil pada perangkat mobile */
             }
+
             table {
                 width: 100%;
                 font-size: 10px; /* Ukuran font lebih kecil pada perangkat mobile */
             }
+
             th, td {
                 padding: 4px 6px; /* Padding lebih kecil untuk mobile */
             }
+
             .container p {
                 font-size: 14px; /* Ukuran font lebih kecil pada perangkat mobile */
+            }
+
+            .container {
+                padding: 10px;
             }
         }
     </style>
@@ -138,217 +146,124 @@
                 </tr>
             </thead>
             <tbody>
-               <tr>
-    <td>15-Nov-2024</td>
-    <td>1</td>
-    <td>Hesti Hi. Umar</td>
-    <td>5053</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>4567</td>
-    <td>0,7</td>
-    <td>0.03</td>
-</tr>
-<tr>
-    <td>15-Nov-2024</td>
-    <td>2</td>
-    <td>Naufal Kangela</td>
-    <td>6244</td>
-    <td>Bacan Kota</td> <!-- Kota -->
-    <td>0985</td>
-    <td>0.2</td>
-    <td>0.04</td>
-</tr>
-<tr>
-    <td>15-Nov-2024</td>
-    <td>3</td>
-    <td>Aprilia Winalda</td>
-    <td>1294</td>
-    <td>Ternate</td> <!-- Kota -->
-    <td>0165</td>
-    <td>0.5</td>
-    <td>0.04</td>
-</tr>
-<tr>
-    <td>17-Nov-2024</td>
-    <td>4</td>
-    <td>Gamiarsi Juma</td>
-    <td>5514</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>0985</td>
-    <td>0.8</td>
-    <td>0.04</td>
-</tr>
-<tr>
-    <td>17-Nov-2024</td>
-    <td>5</td>
-    <td>Anisa Rajangawa</td>
-    <td>5514</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>0911</td>
-    <td>0.3</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>18-Nov-2024</td>
-    <td>6</td>
-    <td>Nurul Kurniawati</td>
-    <td>7890</td>
-    <td>Ternate</td> <!-- Kota -->
-    <td>1234</td>
-    <td>0.2</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>18-Nov-2024</td>
-    <td>7</td>
-    <td>Rafdin Kangela</td>
-    <td>3215</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>5678</td>
-    <td>0.6</td>
-    <td>0.03</td>
-</tr>
-<tr>
-    <td>18-Nov-2024</td>
-    <td>8</td>
-    <td>Sari Ismail</td>
-    <td>9075</td>
-    <td>Ternate</td> <!-- Kota -->
-    <td>1357</td>
-    <td>0.4</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>18-Nov-2024</td>
-    <td>9</td>
-    <td>Aprilia Winalda</td>
-    <td>1294</td>
-    <td>Ternate</td> <!-- Kota -->
-    <td>4680</td>
-    <td>0.2</td>
-    <td>0.04</td>
-</tr>
-<tr>
-    <td>18-Nov-2024</td>
-    <td>10</td>
-    <td>Aprilia Winalda</td>
-    <td>1294</td>
-    <td>Ternate</td> <!-- Kota -->
-    <td>2345</td>
-    <td>0.6</td>
-    <td>0.03</td>
-</tr>
-<tr>
-    <td>18-Nov-2024</td>
-    <td>11</td>
-    <td>Hesti Hi. Umar</td>
-    <td>5253</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>6789</td>
-    <td>0.8</td>
-    <td>0.04</td>
-</tr>
-<tr>
-    <td>19-Nov-2024</td>
-    <td>12</td>
-    <td>Rian Budi</td>
-    <td>9345</td>
-    <td>Bacan Kota</td> <!-- Kota -->
-    <td>2468</td>
-    <td>0.6</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>19-Nov-2024</td>
-    <td>13</td>
-    <td>Feri Muhammad</td>
-    <td>8765</td>
-    <td>Bacan Kota</td> <!-- Kota -->
-    <td>1359</td>
-    <td>0.2</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>19-Nov-2024</td>
-    <td>14</td>
-    <td>Rian Budi</td>
-    <td>9345</td>
-    <td>Bengkulu</td> <!-- Kota -->
-    <td>0987</td>
-    <td>0.5</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>19-Nov-2024</td>
-    <td>15</td>
-    <td>Rian Budi</td>
-    <td>5671</td>
-    <td>Bacan Kota</td> <!-- Kota -->
-    <td>9345</td>
-    <td>0.4</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>20-Nov-2024</td>
-    <td>16</td>
-    <td>Hesti Hi. Umar</td>
-    <td>5053</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>5432</td>
-    <td>0.1</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>20-Nov-2024</td>
-    <td>17</td>
-    <td>Nurul Kurniawati</td>
-    <td>6578</td>
-    <td>Ternate</td> <!-- Kota -->
-    <td>7890</td>
-    <td>0.1</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>20-Nov-2024</td>
-    <td>18</td>
-    <td>Rafdin Kangela</td>
-    <td>3215</td>
-    <td>Obi Laiwui</td> <!-- Kota -->
-    <td>9087</td>
-    <td>0.4</td>
-    <td>0.02</td>
-</tr>
-<tr>
-    <td>20-Nov-2024</td>
-    <td>19</td>
-    <td>Naufal Kangela</td>
-    <td>6244</td>
-    <td>Bacan Kota</td> <!-- Kota -->
-    <td>5670</td>
-    <td>0.2</td>
-    <td>0.0</td>
-</tr>
-<tr>
-    <td>20-Nov-2024</td>
-    <td>20</td>
-    <td>Feri Muhammad</td>
-    <td>8765</td>
-    <td>Bacan Kota</td> <!-- Kota -->
-    <td>3321</td>
-    <td>0.5</td>
-    <td>0.0</td>
-</tr>
-
+                <tr>
+                    <td>15-Nov-2024</td>
+                    <td>1</td>
+                    <td>Hesti Hi. Umar</td>
+                    <td>5053</td>
+                    <td>Obi Laiwui</td> <!-- Kota -->
+                    <td>4567</td>
+                    <td>0,7</td>
+                    <td>0.03</td>
+                </tr>
+                <tr>
+                    <td>15-Nov-2024</td>
+                    <td>2</td>
+                    <td>Naufal Kangela</td>
+                    <td>6244</td>
+                    <td>Bacan Kota</td> <!-- Kota -->
+                    <td>0985</td>
+                    <td>0.2</td>
+                    <td>0.04</td>
+                </tr>
+                <tr>
+                    <td>15-Nov-2024</td>
+                    <td>3</td>
+                    <td>Aprilia Winalda</td>
+                    <td>1294</td>
+                    <td>Ternate</td> <!-- Kota -->
+                    <td>0165</td>
+                    <td>0.5</td>
+                    <td>0.04</td>
+                </tr>
+                <tr>
+                    <td>17-Nov-2024</td>
+                    <td>4</td>
+                    <td>Gamiarsi Juma</td>
+                    <td>5514</td>
+                    <td>Obi Laiwui</td> <!-- Kota -->
+                    <td>0985</td>
+                    <td>0.8</td>
+                    <td>0.04</td>
+                </tr>
+                <tr>
+                    <td>17-Nov-2024</td>
+                    <td>5</td>
+                    <td>Anisa Rajangawa</td>
+                    <td>5514</td>
+                    <td>Obi Laiwui</td> <!-- Kota -->
+                    <td>0911</td>
+                    <td>0.3</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>18-Nov-2024</td>
+                    <td>6</td>
+                    <td>Nurul Kurniawati</td>
+                    <td>7890</td>
+                    <td>Ternate</td> <!-- Kota -->
+                    <td>1234</td>
+                    <td>0.2</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>18-Nov-2024</td>
+                    <td>7</td>
+                    <td>Rafdin Kangela</td>
+                    <td>3215</td>
+                    <td>Obi Laiwui</td> <!-- Kota -->
+                    <td>5678</td>
+                    <td>0.6</td>
+                    <td>0.03</td>
+                </tr>
+                <tr>
+                    <td>18-Nov-2024</td>
+                    <td>8</td>
+                    <td>Sari Ismail</td>
+                    <td>9075</td>
+                    <td>Ternate</td> <!-- Kota -->
+                    <td>1357</td>
+                    <td>0.4</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>18-Nov-2024</td>
+                    <td>9</td>
+                    <td>Aprilia Winalda</td>
+                    <td>1294</td>
+                    <td>Ternate</td> <!-- Kota -->
+                    <td>4680</td>
+                    <td>0.2</td>
+                    <td>0.04</td>
+                </tr>
+                <tr>
+                    <td>18-Nov-2024</td>
+                    <td>10</td>
+                    <td>Aprilia Winalda</td>
+                    <td>1294</td>
+                    <td>Ternate</td> <!-- Kota -->
+                    <td>2345</td>
+                    <td>0.6</td>
+                    <td>0.03</td>
+                </tr>
+                <tr>
+                    <td>18-Nov-2024</td>
+                    <td>11</td>
+                    <td>Hesti Hi. Umar</td>
+                    <td>5253</td>
+                    <td>Obi Laiwui</td> <!-- Kota -->
+                    <td>6789</td>
+                    <td>0.8</td>
+                    <td>0.04</td>
+                </tr>
             </tbody>
         </table>
 
-        <!-- Tautan Kembali -->
-        <a href="indext.html" class="back-link">Kembali</a>
-       
+        <a href="javascript:history.back()" class="back-link">Kembali ke halaman sebelumnya</a>
     </div>
 
     <footer>
-        ©2024 woe.jastip By. Dhani Mochtar
+        <p>&copy; 2024 woe.jastip By. Dhani Mochtar</p>
     </footer>
 </body>
 </html>
