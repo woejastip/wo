@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Scan Paket Multi Ekspedisi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Library Scan Barcode -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 420px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#reader {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#hasil {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 6px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>📦 Scan Paket Ekspedisi</h2>
+
+    <div id="reader"></div>
+
+    <input type="text" id="resi" placeholder="Nomor Resi">
+
+    <select id="ekspedisi">
+        <option value="">Pilih Ekspedisi</option>
+        <option value="jne">JNE</option>
+        <option value="jnt">J&T</option>
+        <option value="sicepat">SiCepat</option>
+        <option value="anteraja">AnterAja</option>
+        <option value="ninja">Ninja</option>
+    </select>
+
+    <button onclick="cekResi()">Cek Paket</button>
+
+    <div id="hasil"></div>
+</div>
+
+<script>
+// ================= SCAN BARCODE =================
+const html5QrCode = new Html5Qrcode("reader");
+
+html5QrCode.start(
+    { facingMode: "environment" },
+    { fps: 10, qrbox: 250 },
+    (decodedText) => {
+        document.getElementById("resi").value = decodedText;
+        html5QrCode.stop();
+    },
+    (error) => {}
+);
+
+// ================= CEK RESI (DUMMY) =================
+function cekResi() {
+    let resi = document.getElementById("resi").value;
+    let ekspedisi = document.getElementById("ekspedisi").value;
+
+    if (resi === "" || ekspedisi === "") {
+        alert("Nomor resi dan ekspedisi wajib diisi");
+        return;
+    }
+
+    document.getElementById("hasil").innerHTML = `
+        <b>Ekspedisi:</b> ${ekspedisi.toUpperCase()}<br>
+        <b>Nomor Resi:</b> ${resi}<br><br>
+        📍 Paket diterima di gudang asal<br>
+        🚚 Paket dalam proses pengiriman<br>
+        ✅ Menuju alamat tujuan
+    `;
+}
+</script>
+
+</body>
+</html>
